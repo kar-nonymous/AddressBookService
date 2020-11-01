@@ -1,5 +1,5 @@
-/*UC 9:
-Identify by address book name and type*/
+/*UC 10:
+Get the number of entries in the address_book*/
 create database addressBookService;
 use addressBookService;
 /*Create address_book table*/
@@ -32,3 +32,4 @@ select * from address_book where City='Agra' order by FirstName;
 alter table address_book add AddressBookName varchar(100),ContactType varchar(100);
 /*Get count*/
 select count(*) from address_book;
+
