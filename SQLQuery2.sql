@@ -1,5 +1,5 @@
-/*UC 3:
-Insert data into table*/
+/*UC 4:
+Update data into table*/
 create database addressBookService;
 use addressBookService;
 /*Create address_book table*/
@@ -16,3 +16,5 @@ Email varchar(250) not null
 /*Insert data in table*/
 insert into address_book values
 ('Kumar','Kartikeya','Techman City','Agra','Uttar Pradesh',281006,7206183244,'kumar.kartikeya@capgemini.com');
+/*Update data into the table*/
+update address_book set Zip=281001 where FirstName='Kumar';
