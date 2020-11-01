@@ -1,5 +1,5 @@
-/*UC 10:
-Get the number of entries in the address_book*/
+/*UC 11:
+Add Person*/
 create database addressBookService;
 use addressBookService;
 /*Create address_book table*/
@@ -32,4 +32,7 @@ select * from address_book where City='Agra' order by FirstName;
 alter table address_book add AddressBookName varchar(100),ContactType varchar(100);
 /*Get count*/
 select count(*) from address_book;
+/*Insert data*/
+insert into address_book values
+('Steven','Spielberg','Cincinnati','Ohio','United States',256871,8521479630,'spielberg@gmail.com','Kartikeya','Stars');
 
