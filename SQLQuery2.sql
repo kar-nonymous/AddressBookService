@@ -1,5 +1,5 @@
-/*UC 5:
-Delete data from table*/
+/*UC 7:
+Return the size of table*/
 create database addressBookService;
 use addressBookService;
 /*Create address_book table*/
@@ -22,3 +22,7 @@ update address_book set Zip=281001 where FirstName='Kumar';
 delete from address_book where FirstName='Kumar';
 /*Retrive data with given city and state name */
 select * from address_book where State='Uttar Pradesh' or City='Agra';
+/*Find size of address book by city*/
+select City,count(City) as CitySize from address_book group by City;
+/*Find size of address book by State*/
+select State,count(State) as StateSize from address_book group by State;
