@@ -30,3 +30,5 @@ select State,count(State) as StateSize from address_book group by State;
 select * from address_book where City='Agra' order by FirstName;
 /*Alter address_book by name and contact type*/
 alter table address_book add AddressBookName varchar(100),ContactType varchar(100);
+/*Get count*/
+select count(*) from address_book;
