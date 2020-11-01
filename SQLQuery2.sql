@@ -1,5 +1,5 @@
-/*UC 2:
-Create table*/
+/*UC 3:
+Insert data into table*/
 create database addressBookService;
 use addressBookService;
 /*Create address_book table*/
@@ -13,3 +13,6 @@ Zip int not null,
 PhoneNo bigint not null,
 Email varchar(250) not null
 );
+/*Insert data in table*/
+insert into address_book values
+('Kumar','Kartikeya','Techman City','Agra','Uttar Pradesh',281006,7206183244,'kumar.kartikeya@capgemini.com');
