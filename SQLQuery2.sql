@@ -1,4 +1,15 @@
-/*UC 1:
-Create database*/
+/*UC 2:
+Create table*/
 create database addressBookService;
 use addressBookService;
+/*Create address_book table*/
+create table address_book
+(FirstName varchar(100) not null,
+LastName varchar(100),
+Address varchar(500) not null,
+City varchar(50) not null,
+State varchar(50) not null,
+Zip int not null,
+PhoneNo bigint not null,
+Email varchar(250) not null
+);
