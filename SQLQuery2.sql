@@ -1,5 +1,5 @@
-/*UC 8:
-Sort data alphabetically*/
+/*UC 9:
+Identify by address book name and type*/
 create database addressBookService;
 use addressBookService;
 /*Create address_book table*/
@@ -28,4 +28,5 @@ select City,count(City) as CitySize from address_book group by City;
 select State,count(State) as StateSize from address_book group by State;
 /*Retrieve the data in alphabetical order*/
 select * from address_book where City='Agra' order by FirstName;
-
+/*Alter address_book by name and contact type*/
+alter table address_book add AddressBookName varchar(100),ContactType varchar(100);
