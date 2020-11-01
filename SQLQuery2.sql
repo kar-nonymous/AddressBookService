@@ -1,5 +1,5 @@
-/*UC 7:
-Return the size of table*/
+/*UC 8:
+Sort data alphabetically*/
 create database addressBookService;
 use addressBookService;
 /*Create address_book table*/
@@ -26,3 +26,6 @@ select * from address_book where State='Uttar Pradesh' or City='Agra';
 select City,count(City) as CitySize from address_book group by City;
 /*Find size of address book by State*/
 select State,count(State) as StateSize from address_book group by State;
+/*Retrieve the data in alphabetical order*/
+select * from address_book where City='Agra' order by FirstName;
+
