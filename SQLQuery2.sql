@@ -20,3 +20,5 @@ insert into address_book values
 update address_book set Zip=281001 where FirstName='Kumar';
 /*Delete data from table*/
 delete from address_book where FirstName='Kumar';
+/*Retrive data with given city and state name */
+select * from address_book where State='Uttar Pradesh' or City='Agra';
