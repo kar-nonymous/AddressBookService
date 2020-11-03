@@ -36,3 +36,26 @@ select count(*) from address_book;
 insert into address_book values
 ('Steven','Spielberg','Cincinnati','Ohio','United States',256871,8521479630,'spielberg@gmail.com','Kartikeya','Stars');
 
+/*UC 12:
+ER Diagram implementation*/
+use addressBookService;
+
+/*Table personalDetails and adding data to it*/
+create table personalDetails(FirstName varchar(100) primary key not null,LastName varchar(100), Address varchar(500),PhoneNo bigint,Email varchar(250));
+insert into personalDetails values('Kumar','Kartikeya','Techman City',7206183244,'kumar.kartikeya@capgemini.com');
+insert into personalDetails values('Steven','Spielberg','Cincinnati',8521479630,'spielberg@gmail.com');
+
+/*Table contactDetails and adding data to it*/
+create table contactDetails(FirstName varchar(100) not null,LastName varchar(100),Address varchar(500),City varchar(50),State varchar(50),Zip int,foreign key(FirstName) references personalDetails(FirstName));
+insert into contactDetails values('Kumar','Kartikeya','Techman City','Agra','Uttar Pradesh',281006);
+insert into contactDetails values('Steven','Spielberg','Cincinnati','Ohio','United States',256871);
+
+/*Table contactType and adding data to it*/
+create table contactType(FirstName varchar(100) not null,LastName varchar(100),Type varchar(100),foreign key(FirstName) references personalDetails(FirstName));
+insert into contactType values('Kumar','Kartikeya','Family');
+insert into contactType values('Steven','Spielberg','Friends');
+
+/*Table addressBook and adding data to it*/
+create table addressBook(FirstName varchar(100) not null,LastName varchar(100),AddressBookName varchar(100),foreign key(FirstName) references personalDetails(FirstName));
+insert into addressBook values('Kumar','Kartikeya','Home');
+insert into addressBook values('Steven','Spielberg','Work');
